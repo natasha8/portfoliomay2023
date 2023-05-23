@@ -1,5 +1,7 @@
-import Image from "next/image";
+"use client";
+
+import AnimatedText from "@/components/AnimatedText";
 
 export default function Home() {
-	return <main>MY PORTFOLIO</main>;
+	return <AnimatedText text="ciao a tutti" style="text-6xl" />;
 }
