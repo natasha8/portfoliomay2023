@@ -2,7 +2,6 @@ import Navbar from "@/components/Navbar";
 import "./globals.css";
 import { Orbitron } from "next/font/google";
 import Sidebar from "@/components/Sidebar";
-import { MobileMenu } from "@/components/menu/MobileMenu";
 import { groq } from "next-sanity";
 import { client } from "@/lib/sanity.client";
 
@@ -26,7 +25,6 @@ export default async function RootLayout({
 			<body className={orbi.className}>
 				<div className="relative h-screen w-screen flex flex-col xl:justify-center items-center bg-space shadow-lg shadow-pink tracking-widest">
 					<div className="xl:hidden w-full border border-purple bg-black/50 ">
-						{/* <MobileMenu /> */}
 						<Navbar />
 					</div>
 					<div className="relative w-[95vw] h-full xl:h-[90vh] rounded-3xl shadow-md shadow-yellow">
