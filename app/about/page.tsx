@@ -27,7 +27,7 @@ export default async function AboutPage() {
 				))}
 			</div>
 
-			<div className="w-1/2">
+			<div className="w-1/2 h-full ">
 				<Spline
 					scene="https://prod.spline.design/4hXVcuqovDhKSpQU/scene.splinecode"
 					className="rounded-full"

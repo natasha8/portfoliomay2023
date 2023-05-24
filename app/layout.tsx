@@ -25,19 +25,19 @@ export default async function RootLayout({
 		<html lang="en">
 			<body className={orbi.className}>
 				<div className="relative h-screen w-screen flex flex-col xl:justify-center items-center bg-space shadow-lg shadow-pink tracking-widest">
-					<div className="xl:hidden w-full border border-purple bg-black/50">
+					<div className="xl:hidden w-full border border-purple bg-black/50 ">
 						{/* <MobileMenu /> */}
 						<Navbar />
 					</div>
-					<div className="relative w-[95vw] h-full xl:h-[90vh] rounded">
+					<div className="relative w-[95vw] h-full xl:h-[90vh] rounded-3xl shadow-md shadow-yellow">
 						<div className="absolute top-0 left-0 w-full h-full  z-10" />
 						<div className="relative z-20 h-full w-full flex flex-col xl:flex-row xl:justify-between xl:shadow-md shadow-pink/50">
-							<div className="hidden xl:flex w-1/4 bg-black/50">
+							<div className="hidden xl:flex w-1/4 bg-black/50 pt-5 ">
 								<Sidebar socials={social} />
 							</div>
 
 							<div
-								className="w-full overflow-y-scroll scrollbar-hide flex justify-center items-center bg-black/50
+								className="w-full overflow-y-scroll scrollbar-hide flex justify-center items-center bg-black/50 
 							                xl:pr-4 xl:w-3/4"
 							>
 								{children}
