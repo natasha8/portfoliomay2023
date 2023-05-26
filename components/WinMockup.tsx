@@ -19,9 +19,9 @@ type Props = {
 };
 export default function WinMockup({ projects }: Props) {
 	return (
-		<div className="w-11/12 h-full max-h-[60vh]">
+		<div className="w-full h-full flex space-x-4 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar-hide">
 			{projects?.map((pro, i) => (
-				<div key={pro._id} className="w-full h-full max-w-screen">
+				<div key={pro._id} className="w-[30rem] h-[60rem]">
 					<div className="relative">
 						<div className="w-full h-full">
 							<div className="bg-black/10 border border-gray-400 rounded-t-lg flex items-stretch">
@@ -66,9 +66,9 @@ export default function WinMockup({ projects }: Props) {
 						<div className="absolute left-0 border-l border-r border-gray-400 h-full w-full"></div>
 					</div>
 
-					<div className="w-full h-[70vh] border border-pink shadow-md shadow-yellow flex justify-center items-center rounded-b-lg">
+					<div className="w-full h-[40vh] border border-pink shadow-md shadow-yellow flex justify-center items-center rounded-b-lg">
 						<div className="container text-center">
-							<div className="flex flex-col xl:flex-row justify-center items-center xl:items-start">
+							<div className="h-[35vh] flex flex-col justify-center items-center xl:items-start overflow-y-scroll scrollbar-hide">
 								<motion.img
 									initial={{ opacity: 0 }}
 									whileInView={{ opacity: 1 }}
@@ -76,14 +76,14 @@ export default function WinMockup({ projects }: Props) {
 									transition={{ duration: 2 }}
 									src={urlFor(pro?.image).url()}
 									alt="project"
-									className="w-full xl:w-1/2 h-full object-contain px-4"
+									className="w-full h-full object-contain px-4 relative"
 								/>
 								<motion.div
 									initial={{ opacity: 0 }}
 									whileInView={{ opacity: 1 }}
 									viewport={{ once: true }}
 									transition={{ duration: 2, delay: 1 }}
-									className="xl:w-1/2 h-[45vh] px-4 overflow-y-auto overflow-x-hidden z-0 scrollbar-hide scrollbar-thin scrollbar-track-yellow scrollbar-thumb-yellow/80"
+									className="h-[45vh] px-4 overflow-y-auto overflow-x-hidden z-0 scrollbar-hide scrollbar-thin scrollbar-track-yellow scrollbar-thumb-yellow/80"
 								>
 									<pre className=" text-justify text-xs whitespace-pre-wrap xl:flex xl:text-lg px-4 lg:p-4  text-purple">
 										{pro.summary}
