@@ -12,17 +12,24 @@ export default async function AboutPage() {
 	 Explore my portfolio and let's connect soon!`;
 
 	return (
-		<div className="w-full h-full flex flex-col xl:flex-row justify-center items-center rounded-full">
-			<div className="w-3/4">
+		<motion.div
+			initial={{ y: 500, opacity: 0 }}
+			whileInView={{ y: 0, opacity: 1 }}
+			transition={{ type: "spring", duration: 1.2 }}
+			viewport={{ once: true }}
+			className="w-full h-full flex flex-col justify-center items-center rounded-full"
+		>
+			<div className="w-full h-full flex justify-center items-center">
 				<AnimatedText
 					text={text}
 					style="text-purple text-2xl text-text"
 				/>
 			</div>
-			<NavLink href="/projects">
-				<TiArrowRightOutline className="hidden xl:block text-4xl text-pink animate-pulse mr-4" />
-				<TiArrowDownOutline className="xl:hidden text-4xl text-pink animate-pulse mr-4" />
-			</NavLink>
-		</div>
+			<div className="w-full h-10 pb-1 flex justify-end">
+				<NavLink href="/projects">
+					<TiArrowDownOutline className="text-4xl text-pink animate-pulse " />
+				</NavLink>
+			</div>
+		</motion.div>
 	);
 }
