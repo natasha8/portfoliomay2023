@@ -2,6 +2,8 @@
 import { Education } from "@/typing";
 import { motion } from "framer-motion";
 import EduCard from "./EduCard";
+import { NavLink } from "./NavLink";
+import { TiArrowDownOutline, TiArrowRightOutline } from "react-icons/ti";
 
 type Props = {
 	education: Education[];
@@ -20,6 +22,10 @@ export default function Edu({ education }: Props) {
 				{education?.map((edu) => (
 					<EduCard key={edu._id} education={edu} />
 				))}
+				<NavLink href="/projects">
+					<TiArrowRightOutline className="hidden xl:flex text-4xl text-pink animate-pulse mr-4" />
+					<TiArrowDownOutline className="xl:hidden text-4xl text-pink animate-pulse mr-4" />
+				</NavLink>
 			</div>
 		</motion.div>
 	);

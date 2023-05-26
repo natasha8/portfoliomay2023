@@ -2,7 +2,7 @@
 import AnimatedText from "@/components/AnimatedText";
 import { NavLink } from "@/components/NavLink";
 import { motion } from "framer-motion";
-import { TiArrowRightOutline } from "react-icons/ti";
+import { TiArrowDownOutline, TiArrowRightOutline } from "react-icons/ti";
 
 export default async function AboutPage() {
 	const text = `Hi there,I'm Natasha, a sharp full-stack web developer.
@@ -12,7 +12,7 @@ export default async function AboutPage() {
 	 Explore my portfolio and let's connect soon!`;
 
 	return (
-		<div className="w-full h-full flex justify-center items-center rounded-full">
+		<div className="w-full h-full flex flex-col xl:flex-row justify-center items-center rounded-full">
 			<div className="w-3/4">
 				<AnimatedText
 					text={text}
@@ -20,7 +20,8 @@ export default async function AboutPage() {
 				/>
 			</div>
 			<NavLink href="/projects">
-				<TiArrowRightOutline className="text-4xl text-pink animate-pulse mr-8" />
+				<TiArrowRightOutline className="hidden xl:block text-4xl text-pink animate-pulse mr-4" />
+				<TiArrowDownOutline className="xl:hidden text-4xl text-pink animate-pulse mr-4" />
 			</NavLink>
 		</div>
 	);

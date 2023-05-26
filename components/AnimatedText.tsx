@@ -10,7 +10,6 @@ export default function AnimatedText({ text, style }: Props) {
 		<div className={`text-pink ${style}`}>
 			{letters.map((letter: string, i: number) => {
 				const isLineBreak = letter === ".";
-				const delay = i * 0.1;
 				return (
 					<motion.span
 						key={i}
