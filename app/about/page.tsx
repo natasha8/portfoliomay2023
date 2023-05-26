@@ -1,11 +1,11 @@
 "use client";
 import AnimatedText from "@/components/AnimatedText";
-import { NavLink } from "@/components/NavLink";
+import ArrowLink from "@/components/ArrowLink";
 import { motion } from "framer-motion";
-import { TiArrowDownOutline, TiArrowRightOutline } from "react-icons/ti";
+import { TiArrowDownOutline } from "react-icons/ti";
 
 export default async function AboutPage() {
-	const text = `Hi there,I'm Natasha, a sharp full-stack web developer.
+	const text = `Hi there, I'm Natasha, a sharp full-stack web developer.
 	 I've honed my skills through tutoring and freelance projects.
 	 Eager for professional growth.
 	 I'm seeking my first full-time role in web development.
@@ -25,11 +25,7 @@ export default async function AboutPage() {
 					style="text-purple text-2xl text-text"
 				/>
 			</div>
-			<div className="w-full h-10 pb-1 flex justify-end">
-				<NavLink href="/projects">
-					<TiArrowDownOutline className="text-4xl text-pink animate-pulse " />
-				</NavLink>
-			</div>
+			<ArrowLink nextPath="/projects"/>
 		</motion.div>
 	);
 }
