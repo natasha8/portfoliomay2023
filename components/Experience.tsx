@@ -11,8 +11,8 @@ type Props = {
 export default function WorkExperience({ experiences }: Props) {
 	return (
 		<motion.div
-			initial={{ x: -200, opacity: 0 }}
-			whileInView={{ x: 0, opacity: 1 }}
+			initial={{ y: 200, opacity: 0 }}
+			whileInView={{ y: 0, opacity: 1 }}
 			transition={{ duration: 1.2 }}
 			viewport={{ once: true }}
 			className="relative h-[82vh] w-full flex flex-col justify-evenly items-center overflow-hidden text-left xl:flex-row mx-auto pt-10"

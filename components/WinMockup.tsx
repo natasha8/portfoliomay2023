@@ -25,9 +25,9 @@ export default function WinMockup({ projects }: Props) {
 		setShow(!show);
 	};
 	return (
-		<div className="w-full h-full flex space-x-4 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar-hide ">
+		<div className="w-full h-full flex space-x-4 overflow-x-scroll p-5 xl:p-10 snap-x snap-mandatory scrollbar-hide ">
 			{projects?.map((pro, i) => (
-				<div key={pro._id} className="w-[80vw] h-[75vh]">
+				<div key={pro._id} className="w-full xl:w-[80vw] h-[75vh]">
 					<div className="relative">
 						<div className="w-full h-full">
 							<div className="bg-black/10 border border-gray-400 rounded-t-lg flex">
@@ -36,7 +36,7 @@ export default function WinMockup({ projects }: Props) {
 									<i className="mx-1 rounded-full w-3 h-3 bg-yellow shadow-pink shadow-lg inline-block"></i>
 									<i className="mx-1 rounded-full w-3 h-3 bg-yellow shadow-pink shadow-lg inline-block"></i>
 								</div>
-								<div className="relative px-4 py-2 mt-2 -mb-px flex-0 border-t border-gray-400 bg-purple rounded-t-lg">
+								<div className="relative px-1 xl:px-4 xl:py-2 mt-2 -mb-px flex-0 border-t border-gray-400 bg-purple rounded-t-lg">
 									<div className="text-sm overflow-hidden pt-1 w-56 whitespace-no-wrap ">
 										<h6 className="capitalize ">
 											Case Study {i + 1} of{" "}
