@@ -3,11 +3,7 @@
 import { PageInfo } from "@/typing";
 import { useForm, ValidationError } from "@formspree/react";
 import { motion } from "framer-motion";
-import {
-	AiFillMail,
-	AiTwotonePushpin,
-	AiTwotoneRedEnvelope,
-} from "react-icons/ai";
+import { AiFillMail } from "react-icons/ai";
 
 type Props = {
 	pageInfo: PageInfo;
