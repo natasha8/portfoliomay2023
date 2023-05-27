@@ -13,16 +13,29 @@ const Sidebar = ({ socials }: Props) => {
 	return (
 		<div className="w-full h-full pl-4 flex flex-col justify-between rounded-3xl">
 			<div className="w-full bg-black-50">
-				<AnimatedText
-					style="text-4xl text-pink uppercase"
-					text="Natasha Parisella"
-				/>
-				<AnimatedText style="text-purple py-2" text="Web Developer" />
+				<motion.h1
+					initial={{ opacity: 0 }}
+					whileInView={{ opacity: 1 }}
+					transition={{ duration: 1 }}
+					viewport={{ once: true }}
+					className="text-4xl text-pink uppercase"
+				>
+					Natasha Parisella
+				</motion.h1>
+				<motion.h3
+					initial={{ opacity: 0 }}
+					whileInView={{ opacity: 1 }}
+					transition={{ duration: 1, delay: 0.1 }}
+					viewport={{ once: true }}
+					className="text-xl text-purple"
+				>
+					Web Developer
+				</motion.h3>
 			</div>
 			<motion.div
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
-				transition={{ delay: 1 }}
+				transition={{ delay: 0.5 }}
 				className="flex flex-col justify-end space-y-1"
 			>
 				<div className="w-full">

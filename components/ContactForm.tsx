@@ -13,7 +13,6 @@ type Props = {
 	pageInfo: PageInfo;
 };
 export default function ContactForm({ pageInfo }: Props) {
-	
 	const [state, handleSubmit] = useForm("xdovvorv");
 	if (state.succeeded) {
 		console.log("INVIATOOOOOOOOOOOOOOOOOO");
@@ -78,7 +77,7 @@ export default function ContactForm({ pageInfo }: Props) {
 					<button
 						type="submit"
 						disabled={state.submitting}
-						className="rounded-md bg-yellow w-full"
+						className="rounded-md bg-yellow text-pink font-bold uppercase tracking-wider w-full"
 					>
 						Submit
 					</button>

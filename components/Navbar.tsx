@@ -1,5 +1,4 @@
 "use client";
-//import { Social } from "@/typing";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu, AiOutlineGithub } from "react-icons/ai";
@@ -40,13 +39,13 @@ const Navbar = () => {
 							transition={{ type: "spring", stiffness: 50 }}
 							className="w-full h-screen lg:h-auto lg:w-44 text-yellow rounded font-extrabold bg-black flex flex-col items-center space-y-4 uppercase pt-10"
 						>
-							<Link href="/">
-								<button>about</button>
-							</Link>
+							<Link href="/">home</Link>
+							<Link href="/about">about</Link>
 							<Link href="/skills">skills</Link>
 							<Link href="/projects">projects</Link>
 							<Link href="/experience">experience</Link>
 							<Link href="/education">education</Link>
+							<Link href="/contact">contact</Link>
 						</motion.div>
 					</div>
 				</>

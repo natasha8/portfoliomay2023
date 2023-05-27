@@ -5,9 +5,9 @@ type Props = {
 };
 export default function ArrowLink({ nextPath }: Props) {
 	return (
-		<div className="w-full h-10 pb-1 pr-4 flex justify-end">
+		<div className="w-full h-10 pb-1 flex justify-center xl:justify-end xl:pr-4">
 			<NavLink href={nextPath}>
-				<TiArrowDownOutline className="text-4xl text-pink animate-pulse " />
+				<TiArrowDownOutline className="text-4xl text-pink animate-pulse" />
 			</NavLink>
 		</div>
 	);

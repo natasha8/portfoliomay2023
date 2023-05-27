@@ -25,10 +25,10 @@ export default async function RootLayout({
 		<html lang="en">
 			<body className={orbi.className}>
 				<div className="relative h-screen w-screen flex flex-col xl:justify-center items-center bg-space shadow-lg shadow-pink tracking-widest">
-					<div className="xl:hidden w-full border border-purple bg-black ">
+					<div className="xl:hidden w-full  bg-black ">
 						<Navbar />
 					</div>
-					<div className="relative w-[95vw] h-full xl:h-[90vh] rounded-3xl shadow-md shadow-yellow overflow-hidden">
+					<div className="relative w-[95vw] mt-3 xl:mt-0 h-[90vh] rounded-3xl shadow-md shadow-yellow overflow-hidden">
 						<div className="absolute top-0 left-0 w-full h-full  z-10" />
 						<div className="relative z-20 h-full w-full flex flex-col xl:flex-row xl:justify-between xl:shadow-md shadow-pink/50">
 							<div className="hidden xl:flex w-1/4 bg-black/50 pt-5 ">
