@@ -21,7 +21,7 @@ export default async function ProjectsPage() {
 			whileInView={{ y: 0, opacity: 1 }}
 			transition={{ type: "spring", duration: 1.2 }}
 			viewport={{ once: true }}
-			className="w-full h-full max-w-[80vw] bg-black/50 shadow-pink flex flex-col border"
+			className="w-full h-full bg-black/50 shadow-pink flex flex-col"
 		>
 			<WinMockup projects={project} />
 			<ArrowLink nextPath="/skills" />

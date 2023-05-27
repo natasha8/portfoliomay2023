@@ -19,12 +19,12 @@ type Props = {
 };
 export default function WinMockup({ projects }: Props) {
 	return (
-		<div className="w-full h-full flex space-x-4 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar-hide">
+		<div className="w-full h-full flex space-x-4 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar-hide ">
 			{projects?.map((pro, i) => (
-				<div key={pro._id} className="w-[30rem] h-[60rem]">
+				<div key={pro._id} className="w-[80vw] h-[75vh]">
 					<div className="relative">
 						<div className="w-full h-full">
-							<div className="bg-black/10 border border-gray-400 rounded-t-lg flex items-stretch">
+							<div className="bg-black/10 border border-gray-400 rounded-t-lg flex">
 								<div className="px-4 pt-4 pb-3 mr-4 text-sm flex-0 text-gray-400 whitespace-no-wrap">
 									<i className="mx-1 rounded-full w-3 h-3 bg-yellow shadow-pink shadow-lg inline-block"></i>
 									<i className="mx-1 rounded-full w-3 h-3 bg-yellow shadow-pink shadow-lg inline-block"></i>
@@ -66,54 +66,51 @@ export default function WinMockup({ projects }: Props) {
 						<div className="absolute left-0 border-l border-r border-gray-400 h-full w-full"></div>
 					</div>
 
-					<div className="w-full h-[40vh] border border-pink shadow-md shadow-yellow flex justify-center items-center rounded-b-lg">
-						<div className="container text-center">
-							<div className="h-[35vh] flex flex-col justify-center items-center xl:items-start overflow-y-scroll scrollbar-hide">
-								<motion.img
-									initial={{ opacity: 0 }}
-									whileInView={{ opacity: 1 }}
-									viewport={{ once: true }}
-									transition={{ duration: 2 }}
-									src={urlFor(pro?.image).url()}
-									alt="project"
-									className="w-full h-full object-contain px-4 relative"
-								/>
-								<motion.div
-									initial={{ opacity: 0 }}
-									whileInView={{ opacity: 1 }}
-									viewport={{ once: true }}
-									transition={{ duration: 2, delay: 1 }}
-									className="h-[45vh] px-4 overflow-y-auto overflow-x-hidden z-0 scrollbar-hide scrollbar-thin scrollbar-track-yellow scrollbar-thumb-yellow/80"
-								>
-									<pre className=" text-justify text-xs whitespace-pre-wrap xl:flex xl:text-lg px-4 lg:p-4  text-purple">
-										{pro.summary}
-									</pre>
-								</motion.div>
+					<div className="w-full h-[60vh] border border-pink shadow-md shadow-yellow flex flex-col justify-between items-center rounded-b-lg">
+						<div className="flex flex-col justify-center items-center xl:items-start overflow-y-scroll scrollbar-hide">
+							<motion.img
+								initial={{ opacity: 0 }}
+								whileInView={{ opacity: 1 }}
+								viewport={{ once: true }}
+								transition={{ duration: 2 }}
+								src={urlFor(pro?.image).url()}
+								alt="project"
+								className="h-[20rem] w-full object-contain px-4 relative"
+							/>
+
+							<motion.div
+								initial={{ opacity: 0 }}
+								whileInView={{ opacity: 1 }}
+								viewport={{ once: true }}
+								transition={{ duration: 2, delay: 1 }}
+								className="px-4 overflow-y-auto overflow-x-hidden z-0 scrollbar-hide scrollbar-thin scrollbar-track-yellow scrollbar-thumb-yellow/80"
+							>
+								<pre className=" text-justify text-xs whitespace-pre-wrap xl:flex xl:text-lg px-4 lg:p-4  text-purple">
+									{pro.summary}
+								</pre>
+							</motion.div>
+						</div>
+						<div className="w-full h-[8vh] flex items-center justify-end rounded-lg bg-black/20 px-4 py-2 ">
+							<div className="flex items-center justify-between ">
+								{pro.technologies?.map((technology) => (
+									<Image
+										alt="technologies"
+										width={45}
+										height={45}
+										className="rounded-full w-1/6 object-scale-down"
+										key={technology._id}
+										src={urlFor(technology?.image).url()}
+									/>
+								))}
 							</div>
-							<div className="w-full flex items-center justify-end rounded-lg bg-black/40 px-4 py-2 ">
-								<div className="flex items-center justify-between ">
-									{pro.technologies?.map((technology) => (
-										<Image
-											alt="technologies"
-											width={45}
-											height={45}
-											className="rounded-full w-1/6 object-scale-down"
-											key={technology._id}
-											src={urlFor(
-												technology?.image
-											).url()}
-										/>
-									))}
-								</div>
-								<a
-									href={pro.linkToBuild}
-									target="_blank"
-									rel="noreferrer noopener"
-									className="flex items-center justify-end uppercase lg:w-[8rem] px-8 py-2"
-								>
-									<RxEnter className="text-4xl text-pink" />
-								</a>
-							</div>
+							<a
+								href={pro.linkToBuild}
+								target="_blank"
+								rel="noreferrer noopener"
+								className="flex items-center justify-end uppercase lg:w-[6rem] px-8 py-2"
+							>
+								<RxEnter className="text-4xl text-pink" />
+							</a>
 						</div>
 					</div>
 				</div>

@@ -34,11 +34,8 @@ export default async function RootLayout({
 							<div className="hidden xl:flex w-1/4 bg-black/50 pt-5 ">
 								<Sidebar socials={social} />
 							</div>
-							<div className="w-full h-full flex justify-center items-center ">
-								<div
-									className="w-full h-full mx-auto overflow-x-scroll scrollbar-hide flex justify-center items-center bg-black/50 
-							                xl:pr-4  xl:max-h-50"
-								>
+							<div className="w-full h-full xl:w-3/4 flex justify-center items-center ">
+								<div className="w-full h-full mx-auto overflow-hidden flex justify-center items-center bg-black/50 ">
 									{children}
 								</div>
 							</div>
