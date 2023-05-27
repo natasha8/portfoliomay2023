@@ -15,10 +15,10 @@ export default function AnimatedText({ text, style }: Props) {
 						key={i}
 						initial={{ opacity: 0, y: 20 }} // Stato iniziale delle lettere
 						animate={{ opacity: 1, y: 0 }} // Stato finale delle lettere
-						transition={{ delay: i * 0.1 }} // Ritardo graduale tra le animazioni delle lettere
+						transition={{ delay: i * 0.02 }} // Ritardo graduale tra le animazioni delle lettere
 						className={isLineBreak ? "block" : "inline"}
 					>
-						{letter}
+						{isLineBreak ? " " : letter}
 					</motion.span>
 				);
 			})}

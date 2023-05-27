@@ -19,13 +19,13 @@ export default async function AboutPage() {
 			viewport={{ once: true }}
 			className="w-full h-full flex flex-col justify-center items-center rounded-full"
 		>
-			<div className="w-full h-full flex justify-center items-center">
+			<div className="w-full h-full flex justify-center items-center space-y-4">
 				<AnimatedText
 					text={text}
-					style="text-purple text-2xl text-text"
+					style="text-purple text-2xl space-y-8"
 				/>
 			</div>
-			<ArrowLink nextPath="/projects"/>
+			<ArrowLink nextPath="/projects" />
 		</motion.div>
 	);
 }
