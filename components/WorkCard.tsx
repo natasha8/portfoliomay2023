@@ -15,7 +15,7 @@ export default function ExpCard({ experience }: Props) {
 			transition={{ duration: 1.2 }}
 			viewport={{ once: true }}
 			className="w-full h-full flex flex-col rounded-lg items-center space-y-4 
-            flex-shrink-0 snap-center p-10 border border-pink opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden text-purple"
+            flex-shrink-0 snap-center p-10 border border-pink shadow-md shadow-yellow opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden text-purple"
 		>
 			<div className="w-full flex flex-col mx-0 lg:mx-4 space-y-4">
 				<div className="space-y-2">
