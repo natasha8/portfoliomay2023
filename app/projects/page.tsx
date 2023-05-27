@@ -14,7 +14,7 @@ const query = groq`
 
 export default async function ProjectsPage() {
 	const project = await client.fetch(query);
-
+	console.log(project);
 	return (
 		<motion.div
 			initial={{ y: 500, opacity: 0 }}

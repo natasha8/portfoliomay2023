@@ -15,9 +15,9 @@ export default function WorkExperience({ experiences }: Props) {
 			whileInView={{ x: 0, opacity: 1 }}
 			transition={{ duration: 1.2 }}
 			viewport={{ once: true }}
-			className="relative h-full w-full flex flex-col justify-evenly items-center overflow-hidden text-left md:flex-row  px-10 mx-auto "
+			className="relative h-[82vh] w-full flex flex-col justify-evenly items-center overflow-hidden text-left xl:flex-row mx-auto pt-10"
 		>
-			<div className="w-full h-full flex space-x-4 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar-hide">
+			<div className="w-full h-full flex space-x-4 overflow-x-scroll snap-x snap-mandatory scrollbar-hide">
 				{experiences?.map((experience) => (
 					<WorkCard key={experience._id} experience={experience} />
 				))}

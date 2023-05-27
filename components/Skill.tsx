@@ -13,7 +13,7 @@ export default function SingleSkill({ skill }: Props) {
 				initial={{
 					opacity: 0,
 				}}
-				transition={{ duration: 2 }}
+				transition={{ duration: 2, delay: 0.5 }}
 				whileInView={{ opacity: 1, x: 0 }}
 				viewport={{ once: true }}
 				src={urlFor(skill.image).url()}
