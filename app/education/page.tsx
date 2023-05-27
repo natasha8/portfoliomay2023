@@ -1,3 +1,4 @@
+import ArrowLink from "@/components/ArrowLink";
 import Edu from "@/components/Education";
 import { client } from "@/lib/sanity.client";
 import { groq } from "next-sanity";
@@ -11,5 +12,10 @@ const query = groq`
 
 export default async function EducationPage() {
 	const education = await client.fetch(query);
-	return <Edu education={education} />;
+	return (
+		<div className="w-full h-full flex flex-col justify-between">
+			<Edu education={education} />
+			<ArrowLink nextPath="/contact" />
+		</div>
+	);
 }
