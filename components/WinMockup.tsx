@@ -25,7 +25,7 @@ export default function WinMockup({ projects }: Props) {
 		setShow(!show);
 	};
 	return (
-		<div className="w-full h-full flex space-x-4 overflow-x-scroll p-5 xl:p-10 snap-x snap-mandatory scrollbar-hide ">
+		<div className="w-full h-full flex space-x-4 overflow-x-scroll p-5 xl:p-2 snap-x snap-mandatory scrollbar-hide ">
 			{projects?.map((pro, i) => (
 				<div key={pro._id} className="w-full xl:w-[80vw] h-[75vh]">
 					<div className="relative">

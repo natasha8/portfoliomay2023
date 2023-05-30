@@ -14,8 +14,10 @@ export default async function ExperiencePage() {
 	const experiences = await client.fetch(query);
 	return (
 		<div className="w-full h-full flex flex-col justify-between overflow-hidden">
+			<ArrowLink nextPath="/skills" way="up" />
+
 			<WorkExperience experiences={experiences} />
-			<ArrowLink nextPath="/education" />
+			<ArrowLink nextPath="/education" way="down" />
 		</div>
 	);
 }

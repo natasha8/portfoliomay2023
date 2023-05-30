@@ -16,8 +16,9 @@ export default function Projects({ project }: Props) {
 			viewport={{ once: true }}
 			className="w-full h-full bg-black/50 shadow-pink flex flex-col"
 		>
+			<ArrowLink nextPath="/about" way="up" />
 			<WinMockup projects={project} />
-			<ArrowLink nextPath="/skills" />
+			<ArrowLink nextPath="/skills" way="down" />
 		</motion.div>
 	);
 }

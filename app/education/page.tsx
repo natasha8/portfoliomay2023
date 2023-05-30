@@ -14,8 +14,10 @@ export default async function EducationPage() {
 	const education = await client.fetch(query);
 	return (
 		<div className="w-full h-full flex flex-col justify-between">
+			<ArrowLink nextPath="/experience" way="up" />
+
 			<Edu education={education} />
-			<ArrowLink nextPath="/contact" />
+			<ArrowLink nextPath="/contact" way="downs" />
 		</div>
 	);
 }

@@ -2,7 +2,6 @@
 import AnimatedText from "@/components/AnimatedText";
 import ArrowLink from "@/components/ArrowLink";
 import { motion } from "framer-motion";
-import { TiArrowDownOutline } from "react-icons/ti";
 
 const text = `Hi there, I'm Natasha, a sharp full-stack web developer.
 	 I've honed my skills through tutoring and freelance projects.
@@ -19,13 +18,15 @@ export default function About() {
 			viewport={{ once: true }}
 			className="w-full h-full flex flex-col justify-center items-center rounded-full"
 		>
+			<ArrowLink nextPath="/" way="up" />
+
 			<div className="w-full h-full flex justify-center text-center xl:text-left items-center space-y-4 bg-black xl:bg-transparent px-4">
 				<AnimatedText
 					text={text}
 					style="text-purple text-2xl space-y-8 font-bold"
 				/>
 			</div>
-			<ArrowLink nextPath="/projects" />
+			<ArrowLink nextPath="/projects" way="down" />
 		</motion.div>
 	);
 }
