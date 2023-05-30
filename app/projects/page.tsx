@@ -1,7 +1,7 @@
 "use client";
 import { client } from "../../lib/sanity.client";
 import { groq } from "next-sanity";
-import Projects from "@/components/Projects";
+import Projects from "../../components/Projects";
 
 const query = groq`
   *[_type == "project"] {
