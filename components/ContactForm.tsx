@@ -16,9 +16,9 @@ export default function ContactForm({ pageInfo }: Props) {
 	}
 	return (
 		<motion.div
-			initial={{ y: 200, opacity: 0 }}
+			initial={{ y: 500, opacity: 0 }}
 			whileInView={{ y: 0, opacity: 1 }}
-			transition={{ duration: 1 }}
+			transition={{ type: "spring", duration: 1.2 }}
 			viewport={{ once: true }}
 			className=" w-11/12 flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 h-screen justify-evenly mx-auto items-center"
 		>
