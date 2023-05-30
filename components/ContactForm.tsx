@@ -12,7 +12,19 @@ export default function ContactForm({ pageInfo }: Props) {
 	const [state, handleSubmit] = useForm("xdovvorv");
 	if (state.succeeded) {
 		console.log("INVIATOOOOOOOOOOOOOOOOOO");
-		return <p className="text-yellow">Thanks for joining!</p>;
+		return (
+			<motion.div
+				initial={{ y: 500, opacity: 0 }}
+				whileInView={{ y: 0, opacity: 1 }}
+				transition={{ type: "spring", duration: 1.2 }}
+				viewport={{ once: true }}
+				className=" w-11/12 flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 h-screen justify-evenly mx-auto items-center"
+			>
+				<p className="text-yellow">
+					Thanks for your email, We'll keep on touch shortly
+				</p>
+			</motion.div>
+		);
 	}
 	return (
 		<motion.div
@@ -45,12 +57,14 @@ export default function ContactForm({ pageInfo }: Props) {
 				</div>
 				<div className="border border-yellow p-4 rounded-md space-y-6 w-full shadow-lg shadow-pink">
 					<div>
-						<label htmlFor="email">Email Address</label>
+						<label htmlFor="email" className="p-1">
+							Email Address
+						</label>
 						<input
 							id="email"
 							type="email"
 							name="email"
-							className="rounded-md w-full"
+							className="rounded-md w-full p-1"
 						/>
 						<ValidationError
 							prefix="Email"
@@ -59,11 +73,13 @@ export default function ContactForm({ pageInfo }: Props) {
 						/>
 					</div>
 					<div>
-						<label htmlFor="message">Message</label>
+						<label htmlFor="message" className="p-1">
+							Message
+						</label>
 						<textarea
 							id="message"
 							name="message"
-							className="rounded-md h-52 w-full"
+							className="rounded-md h-52 w-full p-1 text-black"
 						/>
 						<ValidationError
 							prefix="Message"
