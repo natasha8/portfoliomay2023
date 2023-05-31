@@ -2,6 +2,10 @@ import SkillsContainer from "@/components/SkillsContainer";
 import { client } from "@/lib/sanity.client";
 import { groq } from "next-sanity";
 
+export const metadata = {
+	title: "SKILLS",
+};
+
 const query = groq`
   *[_type == "skill"] | order(name)
 `;

@@ -4,6 +4,10 @@ import { client } from "@/lib/sanity.client";
 import { TiArrowUpOutline } from "react-icons/ti";
 import ArrowLink from "@/components/ArrowLink";
 
+export const metadata = {
+	title: "CONTACT",
+};
+
 const query = groq`
 *[_type == "pageInfo"][0]
 `;

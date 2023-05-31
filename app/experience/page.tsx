@@ -3,6 +3,9 @@ import { groq } from "next-sanity";
 import WorkExperience from "@/components/Experience";
 import ArrowLink from "@/components/ArrowLink";
 
+export const metadata = {
+	title: "EXPERIENCE",
+};
 const query = groq`
   *[_type == "experience"]| order(dateEnded desc) {
     ...,
