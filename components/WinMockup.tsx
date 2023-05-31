@@ -52,17 +52,17 @@ export default function WinMockup({ projects }: Props) {
 								</div>
 							</div>
 							<div className="bg-black/50 border-l border-r border-b border-gray-400 flex flex-row py-2">
-								<div className="px-4 py-2 flex-0 text-gray-400 whitespace-no-wrap flex space-x-2 items-center">
+								<div className="px-4 py-2 flex-0 text-gray-400 whitespace-no-wrap hidden lg:flex space-x-2 items-center ">
 									<RxArrowLeft />
 									<RxArrowRight />
 									<RxReload />
 								</div>
-								<div className="px-4 py-2 my-auto flex-1 border border-gray-400 bg-white rounded-md whitespace-no-wrap overflow-hidden">
+								<div className="px-4 py-2 my-auto flex-1 border border-gray-400 bg-white rounded-md whitespace-no-wrap overflow-hidden text-xs lg:text-md">
 									<a href={pro.linkToBuild} target="_blank">
 										{pro.linkToBuild}
 									</a>
 								</div>
-								<div className="px-4 py-2 flex items-center flex-0 space-x-2 text-gray-400 whitespace-no-wrap text-xl">
+								<div className="px-4 py-2 hidden lg:flex items-center flex-0 space-x-2 text-gray-400 whitespace-no-wrap text-xl">
 									<RxDownload />
 									<RxAvatar />
 									<RxHamburgerMenu />

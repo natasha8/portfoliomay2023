@@ -15,7 +15,7 @@ export default function ExpCard({ experience }: Props) {
 			transition={{ duration: 1.2 }}
 			viewport={{ once: true }}
 			className="w-11/12 h-full flex flex-col rounded-lg items-center space-y-4 
-            flex-shrink-0 snap-center p-10 border border-pink shadow-md shadow-yellow opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden text-purple"
+            flex-shrink-0 snap-center p-10 border border-pink shadow-md shadow-yellow  hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden text-purple"
 		>
 			<div className="w-full flex flex-col space-y-10 mx-0 lg:mx-4 ">
 				<div className="space-y-2">
@@ -36,7 +36,7 @@ export default function ExpCard({ experience }: Props) {
 							  ).toLocaleDateString()}
 					</p>
 				</div>
-				<div className="w-full h-[25vh] xl:h-[45vh] overflow-y-scroll z-0 scrollbar-hide">
+				<div className="w-full h-[25vh] xl:h-[40vh] overflow-y-scroll z-0 scrollbar-hide">
 					<ul className="list-disc space-y-4 ">
 						{experience.points.map((point, i) => (
 							<li key={i}>{point}</li>

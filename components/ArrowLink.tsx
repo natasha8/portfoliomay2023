@@ -9,9 +9,9 @@ export default function ArrowLink({ nextPath, way }: Props) {
 		<div className="w-full h-10 py-1 flex justify-center xl:justify-end xl:pr-4">
 			<NavLink href={nextPath}>
 				{way === "up" ? (
-					<TiArrowUpOutline className="text-4xl text-pink animate-pulse" />
+					<TiArrowUpOutline className="text-4xl text-pink animate-pulse py-1 " />
 				) : (
-					<TiArrowDownOutline className="text-4xl text-pink animate-pulse" />
+					<TiArrowDownOutline className="text-4xl text-pink animate-pulse py-1" />
 				)}
 			</NavLink>
 		</div>

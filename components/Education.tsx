@@ -16,7 +16,7 @@ export default function Edu({ education }: Props) {
 			whileInView={{ y: 0, opacity: 1 }}
 			transition={{ type: "spring", duration: 1.2 }}
 			viewport={{ once: true }}
-			className="relative h-full w-full flex flex-col justify-evenly items-center overflow-hidden text-left md:flex-row  px-10 mx-auto "
+			className="relative h-full w-full flex flex-col justify-evenly items-center overflow-hidden text-left md:flex-row  xl:px-10 mx-auto "
 		>
 			<div className="w-full h-full flex space-x-2 xl:space-x-4 overflow-x-scroll xl:p-10 snap-x snap-mandatory scrollbar-hide">
 				{education?.map((edu) => (

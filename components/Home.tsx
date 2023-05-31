@@ -30,13 +30,14 @@ export default function Home() {
 				scene="https://prod.spline.design/uNf4pB-mDYVsY19O/scene.splinecode"
 				className="hidden xl:flex"
 			/>
-			<Spline
-				onLoad={loaded}
-				scene="https://prod.spline.design/tX6RieIKm-eOSLJI/scene.splinecode"
-				className="xl:hidden"
-			/>
+			<div className="xl:hidden w-full h-full">
+				<Spline
+					onLoad={loaded}
+					scene="https://prod.spline.design/tX6RieIKm-eOSLJI/scene.splinecode"
+				/>
+			</div>
 
-			<ArrowLink nextPath="/about" />
+			<ArrowLink nextPath="/about" way="down" />
 		</div>
 	);
 }

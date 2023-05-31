@@ -19,7 +19,9 @@ const Navbar = () => {
 	};
 	return (
 		<div className="w-full h-12 flex items-center justify-between px-2 ">
-			<h1 className="text-4xl text-pink">NP</h1>
+			<Link href="/">
+				<h1 className="text-4xl text-pink">NP</h1>
+			</Link>
 
 			{open && (
 				<>

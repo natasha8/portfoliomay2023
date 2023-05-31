@@ -18,7 +18,7 @@ export default function SingleSkill({ skill }: Props) {
 				viewport={{ once: true }}
 				src={urlFor(skill.image).url()}
 				alt=""
-				className="w-20 h-20 object-contain object-center filter
+				className="xl:w-20 xl:h-20 object-contain object-center filter
                 transition duration-300 ease-in-out rounded-xl "
 			/>
 		</div>
