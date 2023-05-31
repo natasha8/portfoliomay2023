@@ -25,9 +25,9 @@ export default function WinMockup({ projects }: Props) {
 		setShow(!show);
 	};
 	return (
-		<div className="w-full h-full flex space-x-4 overflow-x-scroll p-5 xl:p-2 snap-x snap-mandatory scrollbar-hide ">
+		<div className="w-full h-full flex space-x-4 overflow-y-hidden overflow-x-scroll p-5 xl:p-2 snap-x snap-mandatory scrollbar-hide ">
 			{projects?.map((pro, i) => (
-				<div key={pro._id} className="w-full xl:w-[80vw] h-[75vh]">
+				<div key={pro._id} className="w-full h-full">
 					<div className="relative">
 						<div className="w-full h-full">
 							<div className="bg-black/10 border border-gray-400 rounded-t-lg flex">
@@ -72,34 +72,30 @@ export default function WinMockup({ projects }: Props) {
 						<div className="absolute left-0 border-l border-r border-gray-400 h-full w-full"></div>
 					</div>
 
-					<div className="w-full h-[60vh] border border-pink shadow-md shadow-yellow flex flex-col justify-between items-center rounded-b-lg">
-						{!show && (
-							<motion.img
-								initial={{ opacity: 0 }}
-								whileInView={{ opacity: 1 }}
-								viewport={{ once: true }}
-								transition={{ duration: 2 }}
-								src={urlFor(pro?.image).url()}
-								alt="project"
-								className="h-full w-full object-contain px-4 relative"
-								onClick={showHandler}
-							/>
-						)}
+					<div className="w-full h-[62vh] border border-pink shadow-md shadow-yellow flex flex-col justify-between items-center rounded-b-lg">
+						<motion.img
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1 }}
+							viewport={{ once: true }}
+							transition={{ duration: 2 }}
+							src={urlFor(pro?.image).url()}
+							alt="project"
+							className="h-1/2 w-full min-w-[50rem] object-contain px-4 relative px-2"
+							onClick={showHandler}
+						/>
 
-						{show && (
-							<motion.div
-								initial={{ opacity: 0 }}
-								whileInView={{ opacity: 1 }}
-								viewport={{ once: true }}
-								transition={{ duration: 2, delay: 1 }}
-								className="px-4 overflow-y-auto h-full overflow-x-hidden z-0 scrollbar-hide scrollbar-thin scrollbar-track-yellow scrollbar-thumb-yellow/80"
-								onClick={showHandler}
-							>
-								<pre className=" text-justify text-xs whitespace-pre-wrap xl:flex xl:text-lg px-4 lg:p-4  text-purple">
-									{pro.summary}
-								</pre>
-							</motion.div>
-						)}
+						<motion.div
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1 }}
+							viewport={{ once: true }}
+							transition={{ duration: 2, delay: 1 }}
+							className="px-4 overflow-y-auto h-full overflow-x-hidden z-0 scrollbar-hide scrollbar-thin scrollbar-track-yellow scrollbar-thumb-yellow/80"
+							onClick={showHandler}
+						>
+							<pre className=" text-justify text-xs whitespace-pre-wrap xl:flex xl:text-lg px-4 lg:p-4  text-purple">
+								{pro.summary}
+							</pre>
+						</motion.div>
 						<div className="w-full h-[8vh] flex items-center justify-end rounded-lg bg-black/20 px-4 py-2 ">
 							<div className="flex items-center justify-between ">
 								{pro.technologies?.map((technology) => (
