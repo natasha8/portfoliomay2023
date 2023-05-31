@@ -1,6 +1,6 @@
 import About from "@/components/About";
 export const metadata = {
-	title: "ABOUT",
+	title: "NP - ABOUT",
 };
 export default async function AboutPage() {
 	return <About />;

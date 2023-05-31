@@ -5,7 +5,7 @@ import { TiArrowUpOutline } from "react-icons/ti";
 import ArrowLink from "@/components/ArrowLink";
 
 export const metadata = {
-	title: "CONTACT",
+	title: "NP - CONTACT",
 };
 
 const query = groq`

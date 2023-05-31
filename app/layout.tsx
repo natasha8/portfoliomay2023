@@ -7,11 +7,6 @@ import { client } from "@/lib/sanity.client";
 
 const orbi = Orbitron({ weight: ["400"], subsets: ["latin"] });
 
-export const metadata = {
-	title: "Natascia Parisella",
-	description: "Portfolio",
-};
-
 const query = groq`
   *[_type == "social"]`;
 

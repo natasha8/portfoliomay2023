@@ -4,7 +4,7 @@ import { client } from "@/lib/sanity.client";
 import { groq } from "next-sanity";
 
 export const metadata = {
-	title: "EDUCATION",
+	title: "NP - EDUCATION",
 };
 
 const query = groq`
