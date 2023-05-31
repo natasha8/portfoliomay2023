@@ -11,7 +11,6 @@ type Props = {
 export default function ContactForm({ pageInfo }: Props) {
 	const [state, handleSubmit] = useForm("xdovvorv");
 	if (state.succeeded) {
-		console.log("INVIATOOOOOOOOOOOOOOOOOO");
 		return (
 			<motion.div
 				initial={{ y: 500, opacity: 0 }}
@@ -21,7 +20,7 @@ export default function ContactForm({ pageInfo }: Props) {
 				className=" w-11/12 flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 h-screen justify-evenly mx-auto items-center"
 			>
 				<p className="text-yellow">
-					Thanks for your email, We'll keep on touch shortly
+					Thanks for your email, keep on touch shortly
 				</p>
 			</motion.div>
 		);
