@@ -43,7 +43,7 @@ export default function ContactForm({ pageInfo }: Props) {
 							I have got just what you need.
 						</h4>
 						<h4 className="text-center text-xl lg:text-4xl font-bold text-pink decoration-pink/50 underline pl-2 uppercase">
-							Lets Talk
+							Lets Talk!
 						</h4>
 					</div>
 
