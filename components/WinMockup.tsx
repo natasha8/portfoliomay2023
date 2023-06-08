@@ -97,13 +97,13 @@ export default function WinMockup({ projects }: Props) {
 							</pre>
 						</motion.div>
 						<div className="w-full h-[8vh] flex items-center justify-end rounded-lg bg-black/20 px-4 py-2 ">
-							<div className="flex items-center justify-between ">
+							<div className="flex items-center space-x-4 ">
 								{pro.technologies?.map((technology) => (
 									<Image
 										alt="technologies"
 										width={45}
 										height={45}
-										className="rounded-full w-1/6 object-scale-down"
+										className="rounded-full w-8 object-scale-down"
 										key={technology._id}
 										src={urlFor(technology?.image).url()}
 									/>
