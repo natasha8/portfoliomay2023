@@ -36,4 +36,11 @@ export default defineType({
 			type: "url",
 		}),
 	],
+	orderings: [
+		{
+			title: "Manual order",
+			name: "manualOrder",
+			by: [{ field: "title", direction: "desc" }],
+		},
+	],
 });
